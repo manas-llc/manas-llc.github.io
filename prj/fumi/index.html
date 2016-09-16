@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#mapField {
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+</head>
+<body>
+
+<div id="mapField"></div>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script>
+function mapInit() {
+    var centerPosition = new google.maps.LatLng(35.011636, 135.768029);
+    var option = {
+        zoom : 18,
+        center : centerPosition,
+        mapTypeId : google.maps.MapTypeId.ROADMAP
+    };
+    //地図本体描画
+    var googlemap = new google.maps.Map(document.getElementById("mapField"), option);
+}
+
+mapInit();
+</script>
+</body>
+</html>
