@@ -17,26 +17,28 @@
 <div id="mapField"></div>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCq0zjdkpQsltGmGdbML6gKjGBM4LXkiYQ&sensor=false"></script>
 <script>
+var g_googlemap;
+var g_centerPosition;
 function mapInit() {
-    var centerPosition = new google.maps.LatLng(35.011636, 135.768029);
+    g_centerPosition = new google.maps.LatLng(35.011636, 135.768029);
     var option = {
         zoom : 12,
         center : centerPosition,
         mapTypeId : google.maps.MapTypeId.ROADMAP
     };
     //地図本体描画
-    var googlemap = new google.maps.Map(document.getElementById("mapField"), option);
+    g_googlemap = new google.maps.Map(document.getElementById("mapField"), option);
 }
 
 mapInit();
 //マーカーオプションの指定
 var markerOption = {
-    position : centerPosition, //マーカーを表示させる座標
-    map : googlemap,  //マーカーを表示させる地図
+    position : g_centerPosition, //マーカーを表示させる座標
+    map : g_googlemap,  //マーカーを表示させる地図
     title : "ホームページ制作スタイル"  //マウスオーバーした際に表示させる文字列
 };
 //マーカー追加
-var marker = new google.maps.Marker(markerOption);
+var marker =  new google.maps.Marker(markerOption);
 </script>
 </body>
 </html>
