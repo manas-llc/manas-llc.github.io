@@ -29,6 +29,14 @@ function mapInit() {
 }
 
 mapInit();
+//マーカーオプションの指定
+var markerOption = {
+    position : centerPosition, //マーカーを表示させる座標
+    map : googlemap,  //マーカーを表示させる地図
+    title : "ホームページ制作スタイル"  //マウスオーバーした際に表示させる文字列
+};
+//マーカー追加
+var marker = new google.maps.Marker(markerOption);
 </script>
 </body>
 </html>
