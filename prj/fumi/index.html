@@ -9,6 +9,10 @@
     width: 100%;
     height: 1000px;
 }
+#infoWindow {
+  width: 200px;
+  height: 200px;
+}
 </style>
 
 </head>
@@ -42,7 +46,7 @@ var marker =  new google.maps.Marker(markerOption);
 
 google.maps.event.addListener(marker, 'click', function (event) {
     new google.maps.InfoWindow({
-        content: "test"
+        content: "<div id='infoWindow'>test</div>"
     }).open(marker.getMap(), marker);
 });
 </script>
