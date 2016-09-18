@@ -39,6 +39,12 @@ var markerOption = {
 };
 //マーカー追加
 var marker =  new google.maps.Marker(markerOption);
+
+google.maps.event.addListener(marker, 'click', function (event) {
+    new google.maps.InfoWindow({
+        content: "test"
+    }).open(marker.getMap(), marker);
+});
 </script>
 </body>
 </html>
