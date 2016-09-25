@@ -46,7 +46,7 @@ var marker =  new google.maps.Marker(markerOption);
 
 google.maps.event.addListener(marker, 'click', function (event) {
     new google.maps.InfoWindow({
-        content: "<div id='infoWindow'><br><img src='http://manas-llc.com/prj/fumi/assets/img/test.jpg'><a href='https://commons.wikimedia.org/wiki/File:Tobacco_shop_%E7%85%99%E8%8D%89%E5%B1%8B_A090793.JPG'>販売店</div>"
+        content: "<div id='infoWindow'><br><img src='http://manas-llc.com/prj/fumi/assets/img/test.jpg' width='100'><a href='https://commons.wikimedia.org/wiki/File:Tobacco_shop_%E7%85%99%E8%8D%89%E5%B1%8B_A090793.JPG'>販売店</div>"
     }).open(marker.getMap(), marker);
 });
 </script>
